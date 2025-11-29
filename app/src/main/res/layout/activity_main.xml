@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- TITLE -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bluetooth Action Trigger"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#1A73E8"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- DEVICE CARD (kept simple but visually distinct) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="#E8F0FE">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Bluetooth Device"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#1A73E8"
+                android:layout_marginBottom="10dp" />
+
+            <Spinner
+                android:id="@+id/spinnerDevices"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="10dp" />
+
+            <Button
+                android:id="@+id/btnRefresh"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Refresh Devices"
+                android:layout_marginTop="6dp"
+                android:backgroundTint="#1A73E8"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <!-- CONNECT ACTION CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="#E8F0FE">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Action on CONNECT"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#1A73E8"
+                android:layout_marginBottom="10dp" />
+
+            <Spinner
+                android:id="@+id/spinnerConnect"
+                android:layout_width="match_parent"
+                android:layout_height="48dp" />
+        </LinearLayout>
+
+        <!-- DISCONNECT ACTION CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="#E8F0FE">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Action on DISCONNECT"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#1A73E8"
+                android:layout_marginBottom="10dp" />
+
+            <Spinner
+                android:id="@+id/spinnerDisconnect"
+                android:layout_width="match_parent"
+                android:layout_height="48dp" />
+        </LinearLayout>
+
+        <!-- SERVICE CONTROL CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="#E8F0FE">
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Save Actions"
+                android:layout_marginBottom="12dp"
+                android:backgroundTint="#1A73E8"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnStartStopService"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Start Service"
+                android:layout_marginBottom="12dp"
+                android:backgroundTint="#1A73E8"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnDebugLock"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="DEBUG: Test Lock"
+                android:backgroundTint="#1A73E8"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
